@@ -31,3 +31,23 @@ Her Repository ve Service için Interface tanımlanır. Böylece bağımlılıkl
 
 ## 📁 Klasör Yapısı
 
+app/
+├── Http/
+│ └── Controllers/
+│ └── Auth/UserController.php
+├── Services/
+│ └── UserService.php
+├── Interfaces/
+│ └── UserServiceInterface.php
+├── Repositories/
+│ └── UserRepository.php
+├── Exceptions/
+│ └── UserNotFoundException.php
+resources/
+├── views/
+│ └── auth/login.blade.php
+│ └── auth/register.blade.php
+lang/
+└── en/user.php
+
+
