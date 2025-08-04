@@ -36,8 +36,6 @@ class UserController extends Controller
             'message' => __('user.login_failed')
         ], 401);
     }
-
-    // Çıkış
     public function logout()
     {
         Auth::logout();
