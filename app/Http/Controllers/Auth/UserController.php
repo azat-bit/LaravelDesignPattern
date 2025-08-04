@@ -17,13 +17,10 @@ class UserController extends Controller
     {
         $this->userService = new UserService();
     }
-
-    // Giriş formunu göster
     public function loginForm()
     {
         return view('auth.login');
     }
-    // Giriş işlemini yap
     public function login(Request $request)
     {
         $credentials = $request->only(['email', 'password']);
@@ -47,15 +44,11 @@ class UserController extends Controller
         Session::flush();
         return redirect()->route('login.form');
     }
-
-    // Kullanıcı listesi (opsiyonel)
     public function index()
     {
         $users = $this->userService->getAll();
         return view('users.index', compact('users'));
     }
-
-    // Belirli kullanıcı (gösterim için)
     public function show($id)
     {
         try {
@@ -70,8 +63,6 @@ class UserController extends Controller
     {
         return view('auth.register');
     }
-
-    // Kayıt işlemi (AJAX)
     public function register(Request $request)
     {
         $request->validate([
