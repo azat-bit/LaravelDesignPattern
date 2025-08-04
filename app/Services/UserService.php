@@ -26,7 +26,7 @@ class UserService implements UserServiceInterface
         $user = $this->userRepository->findById($id);
 
         if (!$user) {
-            throw new UserNotFoundException(); // Lang dosyasından mesaj alır
+            throw new UserNotFoundException();
         }
 
         return $user;
